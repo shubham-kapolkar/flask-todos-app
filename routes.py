@@ -66,7 +66,7 @@ def delete(id):
     return redirect(url_for('todo.index'))
 
 
-@todo_bp.route('/crash')
+@todo_bp.route('/crash') # if 500 error handler is defined at bp level, otherwise fallbacks to the app level errorhandler
 def crash():
     raise Exception("Test crash")
 
